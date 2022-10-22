@@ -6,44 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Jogue um dado de 6!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.074" />
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="53dp"
+        tools:ignore="MissingConstraints" />
+
 
     <ImageView
         android:id="@+id/imagemDado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dado" />
+        app:srcCompat="@drawable/dado"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="200dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/botaoRolarDado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="12dp"
         android:text="Rodar!"
-        app:layout_constraintEnd_toEndOf="@+id/imagemDado"
-        app:layout_constraintTop_toBottomOf="@+id/imagemDado" />
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="412dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/resultadoDado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Resultado:"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="295dp" />
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="345dp"
+        tools:ignore="MissingConstraints" />
+
+    <SeekBar
+        android:id="@+id/slider"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="98dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar Imagem"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="412dp"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
