@@ -1,18 +1,56 @@
-package br.com.bq.dadoapp;
+package com.example.dadoapp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myButtonListenerMethod();
+        btnShow();
+
+        final ImageView imgDado = findViewById(R.id.imagemDado);
+        SeekBar seekBar = findViewById(R.id.slider);
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                float scale = ((i / 100.0f) + 1);
+                imgDado.setScaleX(scale);
+                imgDado.setScaleY(scale);
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                imgDado.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                imgDado.setVisibility(View.INVISIBLE);
+            }
+        });
     }
+
+    public void btnShow() {
+        Button btn = findViewById(R.id.btnMostrar);
+        final ImageView imgDado = findViewById(R.id.imagemDado);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imgDado.setVisibility(View.VISIBLE);
+            }
+        });
+    }
+
     public void myButtonListenerMethod(){
         Button botao = findViewById(R.id.botaoRolarDado);
         botao.setOnClickListener(new View.OnClickListener() {
