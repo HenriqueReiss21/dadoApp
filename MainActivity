@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                float scale = ((i / 100.0f) + 1);
-                imgDado.setScaleX(scale);
-                imgDado.setScaleY(scale);
+                float escala = ((i / 100.0f) + 1);
+                imgDado.setScaleX(escala);
+                imgDado.setScaleY(escala);
 
             }
 
